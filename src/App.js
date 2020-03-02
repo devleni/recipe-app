@@ -1,16 +1,18 @@
-import React from 'react';
-import './App.css';
+import React, { Component } from 'react';
+import Navbar from "./Navbar";
 import Recipe from "./Recipe";
+import RecipeList from "./RecipeList";
+import './App.css';
 
-function App() {
-  return (
-    <Recipe
-      title="Pasta"
-      ingredients={["flour", "water"]}
-      instructions="Make pasta and cook it."
-      img="spaghetti.jpg"
-    />
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Navbar />
+        <RecipeList />
+      </div>
+    );
+  }
 }
 
 export default App;
